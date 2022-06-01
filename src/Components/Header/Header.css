@@ -1,0 +1,41 @@
+.header-banner-img {
+  height: 471px;
+  z-index: 0;
+}
+.left-header-banner-text {
+  font-weight: 700;
+  font-size: 40px;
+}
+.text-blue {
+  color: #4d77ff;
+}
+.body{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.banner-img-holder{
+    height: 471px;
+    z-index: 0;
+    right: -123px;
+    position: relative;
+}
+.myCard{
+    width: 144px;
+    height: 178px;
+    background: red;
+    bottom: 10px;
+    left: 20px;
+    position: absolute;
+
+}
+.ellips {
+    position: absolute;
+    left: -180px;
+    top: 151px;
+    background: #4d77ff;
+    z-index: -1;
+    width: 1240px;
+    height: 1240px;
+    border-radius: 50%;
+}

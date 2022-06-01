@@ -6,7 +6,7 @@ import './NavBar.css'
 
 const NavBar = () => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar className="nav-bar"bg="light" expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
                     <Image src={Logo}></Image>
