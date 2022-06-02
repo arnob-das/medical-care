@@ -1,0 +1,18 @@
+.not-found-title{
+    margin-top: 120px;
+    font-size: 120px;
+    margin-bottom: 5px;
+}
+.not-found .page-not-found{
+    font-size:80px;
+    color: #363434f5;
+}
+.home-btn{
+    color:#fff;
+    font-size: 20px;
+    
+    width: 162px;
+    height: 52px;
+    background: #4d77ff;
+    border-radius: 10px;
+}

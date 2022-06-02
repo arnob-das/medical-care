@@ -9,33 +9,48 @@
 .text-blue {
   color: #4d77ff;
 }
-.body{
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
+.header-container {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
-.banner-img-holder{
-    height: 471px;
-    z-index: 0;
-    right: -123px;
-    position: relative;
+.contact-us-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 36px;
+  gap: 10px;
+  width: 162px;
+  height: 52px;
+  background: #4d77ff;
+  border-radius: 10px;
 }
-.myCard{
-    width: 144px;
-    height: 178px;
-    background: red;
-    bottom: 10px;
-    left: 20px;
-    position: absolute;
-
+.banner-img-holder {
+  height: 471px;
+  z-index: 0;
+  right: -123px;
+  position: relative;
+}
+.myCard {
+  width: 168px;
+  height: 188px;
+  bottom: 65px;
+  left: -14px;
+  position: absolute;
+}
+.btn-blue {
+  background: #4d77ff !important;
+  color: #fff;
+  border-radius: 8px;
 }
 .ellips {
-    position: absolute;
-    left: -180px;
-    top: 151px;
-    background: #4d77ff;
-    z-index: -1;
-    width: 1240px;
-    height: 1240px;
-    border-radius: 50%;
+  position: absolute;
+  left: -180px;
+  top: 151px;
+  background: #4d77ff;
+  z-index: -1;
+  width: 1240px;
+  height: 1240px;
+  border-radius: 50%;
 }
