@@ -17,6 +17,7 @@ const NavBar = () => {
                         <NavLink className="mr-4" to="/home">Home</NavLink>
                         <NavLink className="mr-4" to="/aboutUs">About Us</NavLink>
                         <NavLink className="mr-4" to="/services">Services</NavLink>
+                        <NavLink className="mr-4" to="/find-doctor-section">Doctors</NavLink>
                     </Nav>
                     <Navbar.Text className="me-auto">
                         <Link className="mr-4" to="/login">Mark Otto</Link>

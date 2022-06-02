@@ -1,0 +1,78 @@
+.find-doctor-section {
+  margin-top: 35px;
+  height: 670px;
+  /* background: rebeccapurple; */
+  margin-bottom: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+.find-doctor-row {
+  padding-top: 35px;
+}
+.tick-sign {
+  padding-right: 0px;
+}
+.see-the-doctors-btn {
+  width: 200px;
+  height: 52px;
+  background: #4d77ff;
+  border-radius: 10px;
+  flex: none;
+  order: 3;
+}
+
+.see-the-doctor-right-side{
+    margin-left: 26px;
+}
+
+.see-the-doctor-image {
+  position: absolute;
+  right: -48px;
+  top: 46px;
+  z-index: 1;
+}
+.circle {
+  height: 803px;
+  width: 803px;
+  background: #4d77ff;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  left: 3px;
+  top: 190px;
+}
+.find-doctprs-card {
+  width: 202px;
+  height: 256px;
+  bottom: 65px;
+  left: -4px;
+  top: 105px;
+  position: absolute;
+  box-shadow: -4px -10px 50px rgb(18 18 18 / 10%);
+  border-radius: 10px;
+  padding-left: 29px;
+  background: #fff;
+}
+.find-doctprs-card h4 {
+  font-weight: 700;
+  font-size: 14px;
+  color: #121212;
+  margin: 0;
+  padding: 0;
+}
+.find-doctprs-card p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #696969;
+  margin: 0;
+  padding: 0;
+}
+.find-doctor-btn {
+  color: #4d77ff;
+  width: 142px;
+  height: 40px;
+  background: #edf1ff;
+  border-radius: 10px;
+  border: none;
+}

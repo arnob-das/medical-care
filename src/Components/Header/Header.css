@@ -51,11 +51,11 @@
 }
 .ellips {
   position: absolute;
-    left: -298px;
-    top: 160px;
-    background: #4d77ff;
-    z-index: -1;
-    width: 1300px;
-    height: 1300px;
-    border-radius: 50%;
+  left: -298px;
+  top: 160px;
+  background: #4d77ff;
+  z-index: -1;
+  width: 1300px;
+  height: 1300px;
+  border-radius: 50%;
 }

@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import FindDoctor from './Components/FindDoctor/FindDoctor';
 import Home from './Components/Home/Home';
 import NotFound from './Components/NotFound/NotFound';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
@@ -13,6 +14,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/serviceDetails/:id" element={<ServiceDetails />} />
+        <Route path="/find-doctor-section" element={<FindDoctor />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
