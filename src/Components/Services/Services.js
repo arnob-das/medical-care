@@ -18,7 +18,7 @@ const Services = () => {
                 <h2>step by step to get your solutions</h2>
             </div>
             <Container className="mt-5"
->
+            >
                 <Row
                     xm={12}
                     md={6}

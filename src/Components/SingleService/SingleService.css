@@ -2,6 +2,7 @@
   height: 290px;
   position: absolute;
   border: none;
+  border-top: 5px solid #4D77FF;
   box-shadow: 0px 10px 40px rgba(18, 18, 18, 0.1);
   border-radius: 0px 0px 10px 10px;
 }

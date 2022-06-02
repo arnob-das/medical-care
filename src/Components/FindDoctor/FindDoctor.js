@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
-import Tick from '../../images/icons/Group 3.png'
-import Doctor2 from '../../images/banner_images/female-doctor_fococlipping_removed 1.png'
-import Group1 from '../../images/banner_images/Group 1.png'
-import './FindDoctor.css'
+import Tick from '../../images/icons/Group 3.png';
+import Doctor2 from '../../images/banner_images/female-doctor_fococlipping_removed 1.png';
+import Group1 from '../../images/banner_images/Group 1.png';
+import MaskGroup from '../../images/banner_images/Mask group.png';
+import './FindDoctor.css';
 
 const FindDoctor = () => {
     return (
@@ -58,9 +59,9 @@ const FindDoctor = () => {
                             </Row>
                             <Row className="mt-3">
                                 <Col className="d-flex align-items-center">
-                                    <Image src={Group1}></Image>
+                                    <Image src={MaskGroup}></Image>
                                     <div className="ml-3">
-                                        <h4>Dr. Adinda</h4>
+                                        <h4>Dr. Jackson</h4>
                                         <p>Eye Specialist</p>
                                     </div>
                                 </Col>
