@@ -1,17 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from '../Header/Header';
 import NavBar from '../NavBar/NavBar';
+import Services from '../Services/Services';
 const Home = () => {
 
-    // useEffect(() => {
-    //     fetch('services.json')
-    //         .then(res => res.json())
-    //         .then(data => console.log(data))
-    // }, [])
+    
     return (
         <div>
             <NavBar />
             <Header />
+            <Services />
         </div>
     );
 };

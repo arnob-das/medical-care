@@ -15,7 +15,8 @@ const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav className="me-auto">
                         <NavLink className="mr-4" to="/home">Home</NavLink>
-                        <NavLink className="mr-4" to="/login">Login</NavLink>
+                        <NavLink className="mr-4" to="/aboutUs">About Us</NavLink>
+                        <NavLink className="mr-4" to="/services">Services</NavLink>
                     </Nav>
                     <Navbar.Text className="me-auto">
                         <Link className="mr-4" to="/login">Mark Otto</Link>
