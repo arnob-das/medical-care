@@ -1,0 +1,15 @@
+.ourRatings {
+  height: 425px;
+}
+.rating-card {
+  height: 190px;
+  width: 287px;
+  margin: 30px 30px;
+  border: none;
+  border-top: 5px solid #4d77ff;
+  box-shadow: 0px 10px 40px rgba(18, 18, 18, 0.1);
+  border-radius: 0px 0px 10px 10px;
+}
+.rating-card .card-title{
+    font-weight: bold;
+}
