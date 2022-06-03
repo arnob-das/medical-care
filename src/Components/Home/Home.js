@@ -1,4 +1,5 @@
 import React from 'react';
+import Feedback from '../Feedback/Feedback';
 import FindDoctor from '../FindDoctor/FindDoctor';
 import Header from '../Header/Header';
 import MakeASchedule from '../MakeASchedule/MakeASchedule';
@@ -16,6 +17,7 @@ const Home = () => {
             <FindDoctor />
             <MakeASchedule />
             <OurRatings />
+            <Feedback />
         </div>
     );
 };

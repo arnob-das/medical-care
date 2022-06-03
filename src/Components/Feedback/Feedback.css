@@ -1,0 +1,46 @@
+#reviews {
+  height: 350px;
+  width: 90%;
+  background: #edf1ff;
+  position: absolute;
+}
+.feedback-container {
+  position: relative;
+  top: 100px;
+}
+.feedback-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 40px;
+  letter-spacing: 0.03em;
+  color: #121212;
+  height: 160px;
+}
+.left-right-btn {
+  border: none;
+  background: none;
+}
+.feedback-btn-text {
+  position: relative;
+  top: 88px;
+}
+.feedback-btn-container {
+  position: absolute;
+  right: -115px;
+}
+.feedback-name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #121212;
+}
+.feedback-profession {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: #696969;
+}
