@@ -1,6 +1,7 @@
 import React from 'react';
 import Feedback from '../Feedback/Feedback';
 import FindDoctor from '../FindDoctor/FindDoctor';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import MakeASchedule from '../MakeASchedule/MakeASchedule';
 import NavBar from '../NavBar/NavBar';
@@ -18,6 +19,7 @@ const Home = () => {
             <MakeASchedule />
             <OurRatings />
             <Feedback />
+            <Footer />
         </div>
     );
 };

@@ -39,7 +39,7 @@ const Feedback = () => {
     let review = feedbacks[index]?.review;
 
     return (
-        <section>
+        <section style={{height:'670px'}}>
             <h3 className="text-center mt-5">Our patients feedback about us</h3>
             <p className="text-secondary text-center mb-5">their impression after using this application</p>
             <div id="reviews" className="reviews">
