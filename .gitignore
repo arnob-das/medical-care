@@ -10,8 +10,10 @@
 
 # production
 /build
+
 # git ignore
 Firebase/
+
 # misc
 .DS_Store
 .env.local
