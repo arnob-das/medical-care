@@ -14,7 +14,8 @@ const Login = () => {
         auth,
         error,
         handleSignInWithEmailPass,
-        handleResetPasswordWithEmailLink
+        handleResetPasswordWithEmailLink,
+        handleVerificationEmail
     } = useAuth();
 
     // declare state
@@ -32,16 +33,16 @@ const Login = () => {
 
 
     const handleFullName = (e) => {
-        setFullName(e.target.value);
+        setFullName(e.target.value); // name
     }
     const handlePhotoUrl = (e) => {
-        setPhotoUrl(e.target.value);
+        setPhotoUrl(e.target.value); // photoUrl
     }
     const handleEmail = (e) => {
-        setEmail(e.target.value);
+        setEmail(e.target.value); // email
     }
     const handlePassword = (e) => {
-        setPassword(e.target.value);
+        setPassword(e.target.value); // password
     }
 
     // navigate to redirect url
@@ -50,13 +51,14 @@ const Login = () => {
     }
 
     // handle flag
+    // toggle between registration and login form
     const handleFlag = () => {
         if (flag === 0) {
-            setFlag(1);
+            setFlag(1); // registration
             return;
         }
         else {
-            setFlag(0);
+            setFlag(0); // login
             return;
         }
     }
@@ -70,6 +72,10 @@ const Login = () => {
                 .then((userCredential) => {
                     const user = userCredential.user;
                     //setUser(user);
+                    handleVerificationEmail()
+                        .then(() => {
+                            setError("Email Verification Email Sent");
+                        })
                     setError("");
                 })
                 .catch((error) => {
@@ -112,8 +118,6 @@ const Login = () => {
         handleResetPasswordWithEmailLink(auth, email)
             .then(() => {
                 setError("Email Sent ! Please click on the link to reset your password.");
-                console.log(email);
-                console.log("Working");
                 setFlag(0);
                 setFlagResetPassword(0);
             })
@@ -121,7 +125,6 @@ const Login = () => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 setError(errorCode, errorMessage)
-                // ..
             });
     }
 
