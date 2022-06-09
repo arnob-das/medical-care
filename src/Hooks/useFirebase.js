@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import initializeAuthentication from "../Firebase/Firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 
 initializeAuthentication();
 
@@ -36,20 +36,30 @@ const useFirebase = () => {
     }
 
     //handle registration with email and password
-    const handleRegisterWithEmailPassword = (auth,email, password) => {
+    const handleRegisterWithEmailPassword = (auth, email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
-        // .then((userCredential) => {
-        //     // Signed in 
-        //     const user = userCredential.user;
-        //     // ...
-        // })
-        // .catch((error) => {
-        //     const errorCode = error.code;
-        //     const errorMessage = error.message;
-        //     // ..
-        // });
+
     }
 
+    // handle sign in with email and password
+    const handleSignInWithEmailPass = (auth, email, password) => {
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
+    // handle reset password with email password reset link
+    const handleResetPasswordWithEmailLink = (email="contact.arnobdas@gmail.com") => {
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                // Password reset email sent!
+                // ..
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+            });
+    }
+    handleResetPasswordWithEmailLink()
 
     return {
         auth,
@@ -59,7 +69,8 @@ const useFirebase = () => {
         setError,
         signInUsingGoogle,
         googleSignOut,
-        handleRegisterWithEmailPassword
+        handleRegisterWithEmailPassword,
+        handleSignInWithEmailPass
     }
 }
 export default useFirebase;

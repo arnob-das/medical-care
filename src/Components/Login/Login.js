@@ -6,7 +6,7 @@ import NavBar from '../NavBar/NavBar';
 import './Login.css'
 
 const Login = () => {
-    const { signInUsingGoogle, setError, handleRegisterWithEmailPassword, setUser, auth, error } = useAuth();
+    const { signInUsingGoogle, setError, handleRegisterWithEmailPassword, setUser, auth, error, handleSignInWithEmailPass } = useAuth();
 
     // declare state
     let [fullName, setFullName] = useState("");
@@ -34,6 +34,11 @@ const Login = () => {
         setPassword(e.target.value);
     }
 
+    // navigate to redirect url
+    const navigateToRedirectUrl = () => {
+        navigate(redirect_uri);
+    }
+
     // handle flag
     const handleFlag = () => {
         if (flag === 0) {
@@ -49,27 +54,39 @@ const Login = () => {
     // handle user registration with email and password
     const handleRegistrationLoginWithEmailPass = (e) => {
         e.preventDefault();
-        // only for registration
-        flag && handleRegisterWithEmailPassword(auth, email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                //setUser(user);
-                setError("");
-            })
-            .catch((error) => {
-                const errorMessage = error.message;
-                setError(errorMessage)
-            });
+        // only for registration with email and password
+        flag &&
+            handleRegisterWithEmailPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    //setUser(user);
+                    setError("");
+                })
+                .catch((error) => {
+                    const errorMessage = error.message;
+                    setError(errorMessage)
+                });
 
-        !flag && setError("Log is not processed");
-
+        //only for sign in with email and password
+        !flag &&
+            handleSignInWithEmailPass(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    setUser(user);
+                    navigateToRedirectUrl();
+                })
+                .catch((error) => {
+                    const errorMessage = error.message;
+                    setError(errorMessage)
+                });
     }
 
     // handle google sign in
     const handleGoogleSignIn = () => {
         signInUsingGoogle()
             .then(result => {
-                navigate(redirect_uri);
+                navigateToRedirectUrl();
             })
             .catch(err => { setError(err.message); })
     }
@@ -118,7 +135,7 @@ const Login = () => {
                     </Button>
                 </Form>
                 <Form.Group className="d-flex justify-content-center mt-3">
-                    <p>{flag ? "Already Have An Account?" : "New User?"} <span onClick={handleFlag} className="text-blue text-underline">{flag ? "Login" : "Register"}</span></p>
+                    <p>{flag ? "Already Have An Account?" : "Don't Have An Account?"} <span onClick={handleFlag} className="text-blue text-underline">{flag ? "Login" : "Create An Account"}</span></p>
                 </Form.Group>
                 <Button onClick={handleGoogleSignIn}>Google Sign In</Button>
                 <Link to="/register">New User ?</Link>
