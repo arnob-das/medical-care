@@ -47,19 +47,10 @@ const useFirebase = () => {
     }
 
     // handle reset password with email password reset link
-    const handleResetPasswordWithEmailLink = (email="contact.arnobdas@gmail.com") => {
-        sendPasswordResetEmail(auth, email)
-            .then(() => {
-                // Password reset email sent!
-                // ..
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // ..
-            });
+    const handleResetPasswordWithEmailLink = (auth, email) => {
+        return sendPasswordResetEmail(auth, email)
+
     }
-    handleResetPasswordWithEmailLink()
 
     return {
         auth,
@@ -70,7 +61,8 @@ const useFirebase = () => {
         signInUsingGoogle,
         googleSignOut,
         handleRegisterWithEmailPassword,
-        handleSignInWithEmailPass
+        handleSignInWithEmailPass,
+        handleResetPasswordWithEmailLink
     }
 }
 export default useFirebase;
