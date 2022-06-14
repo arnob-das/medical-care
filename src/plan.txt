@@ -1,0 +1,12 @@
+Vogoban Kripa Koro
+
+jodi user sign in kore tahole "/login" page a gele
+sign in sign up form ar bodole user ar profile dekha jabe
+
+user profile => image, name, email
+
+options => update photo, update name, update email
+
+last feature => delete account
+
+last option => log out

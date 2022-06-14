@@ -12,6 +12,7 @@ const NavBar = () => {
     const handleGoogleSignOut = () => {
         googleSignOut();
     }
+    //console.log(user.displayName)
 
     return (
         <Navbar className="nav-bar" bg="light" expand="lg">

@@ -3,6 +3,7 @@ import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import NavBar from '../NavBar/NavBar';
+import UserProfile from '../UserProfile/UserProfile';
 import './Login.css'
 
 const Login = () => {
@@ -202,6 +203,9 @@ const Login = () => {
                 </Form.Group>
                 <Button onClick={handleGoogleSignIn}>Google Sign In</Button>
                 <Link to="/register">New User ?</Link>
+            </Container>
+            <Container>
+                <UserProfile />
             </Container>
         </div>
     );
